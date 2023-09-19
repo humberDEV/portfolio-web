@@ -1,0 +1,43 @@
+.nav-container {
+  position: sticky;
+  padding: 1rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #202020;
+}
+
+.nav-logo {
+  margin-left: 15vw;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  list-style: none;
+  margin-right: 15vw;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+ul {
+  justify-content: flex-end;
+}
+
+.list-item:hover {
+  transition: 1s;
+  color: aqua;
+  cursor: pointer;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
