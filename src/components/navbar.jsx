@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import '../styles/navbar.css'
 
 const navItems = [{
@@ -21,22 +22,35 @@ const navItems = [{
     href: "#contact"
 }]
 
-export default function Navbar(){
-    return(
-        <header className='header'>
-            <nav className="nav-container">
-                <a href="#landing" className='nav-logo'>Humberto</a>
-                
-                <div className="nav-menu">
-                <ul>
-                    {navItems.map(navItem => (
-                        <li key={navItem.name}>
-                            <a className='list-item' href={navItem.href}>{navItem.name}</a>
-                        </li>
-                    ))}
-                    </ul>
-                </div>
-            </nav>
-        </header>
-    )
-}
+
+export default function Navbar() {
+    const [buttonMode, setButtonMode] = useState("fa-solid fa-moon");
+  
+    const toggleButtonMode = () => {
+      if (buttonMode === "fa-solid fa-moon") {
+        setButtonMode("fa-solid fa-sun");
+      } else {
+        setButtonMode("fa-solid fa-moon");
+      }
+    };
+  
+    return (
+      <header className='header'>
+        <nav className="nav-container">
+          <a href="#landing" className='nav-logo'>Humber.dev</a>
+          <div className="nav-menu">
+            <ul>
+              {navItems.map(navItem => (
+                <li key={navItem.name}>
+                  <a className='list-item' href={navItem.href}>{navItem.name}</a>
+                </li>
+              ))}
+              <li className='switch-button' onClick={toggleButtonMode}>
+                <i className={buttonMode}></i>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    );
+  }

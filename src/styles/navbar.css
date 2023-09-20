@@ -1,28 +1,32 @@
 .nav-container {
-  position: sticky;
+  position: fixed;
+  top: 0;
+  width: 100vw;
   padding: 1rem;
-  font-size: 1.3rem;
-  font-weight: 400;
+  font-size: 1.2rem;
+  font-weight: bold;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #202020;
+  background-color: var(--background-color);
+  z-index: 100;
 }
 
 .nav-logo {
-  margin-left: 15vw;
+  margin-left: 10vw;
+  font-weight: bolder;
 }
 
 ul {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: 1.5rem;
   list-style: none;
-  margin-right: 15vw;
+  margin-right: 10vw;
 }
 
 a {
-  color: white;
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -30,9 +34,10 @@ ul {
   justify-content: flex-end;
 }
 
+a:hover,
 .list-item:hover {
-  transition: 1s;
-  color: aqua;
+  transition: 0.3s all;
+  color: #007bff;
   cursor: pointer;
 }
 
@@ -40,4 +45,21 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+}
+
+.switch-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+
+.switch-button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }

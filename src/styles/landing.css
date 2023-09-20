@@ -1,0 +1,93 @@
+.landing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.text-container {
+  text-align: left;
+  line-height: 2em;
+  max-width: 32em;
+}
+
+.im-text {
+  color: #007bff;
+}
+
+h1 {
+  font-size: 3.2em;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 400;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-button,
+.download-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20em;
+  height: 20em;
+  margin-left: 5em;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-container > img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  object-fit: cover;
+  box-shadow: inset 0 0 0 9px rgb(255, 255, 255 / 30);
+  order: 1;
+  border-radius: 50%;
+  animation: profileAnimation 6s ease-in-out infinite 1s;
+  position: absolute;
+}
+
+.console {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes profileAnimation {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+}
