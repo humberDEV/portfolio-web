@@ -6,6 +6,7 @@
 
   --background-color: #fbfafb;
   --text-color: #313031;
+  --transition-duration: 0.3s;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,7 +15,14 @@
   -webkit-text-size-adjust: 100%;
 }
 
+[data-theme="dark"] {
+  --background-color: #202020;
+  --text-color: #fbfafb;
+}
+
 body {
+  transition: background-color var(--transition-duration),
+    color var(--transition-duration);
   background-color: var(--background-color);
   color: var(--text-color);
   padding: auto;

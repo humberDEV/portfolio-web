@@ -8,8 +8,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--background-color);
   z-index: 100;
+  background-color: var(--background);
 }
 
 .nav-logo {
@@ -34,6 +34,10 @@ ul {
   justify-content: flex-end;
 }
 
+#buttonMode {
+  color: white;
+}
+
 a:hover,
 .list-item:hover {
   transition: 0.3s all;
@@ -54,7 +58,6 @@ a:hover,
   width: 1.5em;
   height: 1.5em;
   background-color: #007bff;
-  color: #fff;
   border-radius: 50%;
   transition: all 0.5s;
 }

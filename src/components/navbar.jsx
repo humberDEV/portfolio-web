@@ -1,56 +1,78 @@
-import { useState } from 'react'
-import '../styles/navbar.css'
+import { useState } from "react";
+import "../styles/navbar.css";
 
-const navItems = [{
-    name: "About",
-    href: "#about"
-},
-{
-    name: "Experience",
-    href: "#experience"
-},
-{
-    name: "Projects",
-    href: "#projects"
-},
-{
-    name: "Skills",
-    href: "#skills"
-},
-{
-    name: "Contact",
-    href: "#contact"
-}]
+const navItems = [
+	{
+		name: "About",
+		href: "#about",
+	},
+	{
+		name: "Experience",
+		href: "#experience",
+	},
+	{
+		name: "Projects",
+		href: "#projects",
+	},
+	{
+		name: "Skills",
+		href: "#skills",
+	},
+	{
+		name: "Contact",
+		href: "#contact",
+	},
+];
 
+export const COLOR_THEME_LOCALSTORAGE_KEY = "color__theme";
+
+const setColorStatus = (color) => {
+	localStorage.setItem(COLOR_THEME_LOCALSTORAGE_KEY, color);
+};
+
+const getColorStatus = () => {
+	return localStorage.getItem(COLOR_THEME_LOCALSTORAGE_KEY);
+};
 
 export default function Navbar() {
-    const [buttonMode, setButtonMode] = useState("fa-solid fa-moon");
-  
-    const toggleButtonMode = () => {
-      if (buttonMode === "fa-solid fa-moon") {
-        setButtonMode("fa-solid fa-sun");
-      } else {
-        setButtonMode("fa-solid fa-moon");
-      }
-    };
-  
-    return (
-      <header className='header'>
-        <nav className="nav-container">
-          <a href="#landing" className='nav-logo'>Humber.dev</a>
-          <div className="nav-menu">
-            <ul>
-              {navItems.map(navItem => (
-                <li key={navItem.name}>
-                  <a className='list-item' href={navItem.href}>{navItem.name}</a>
-                </li>
-              ))}
-              <li className='switch-button' onClick={toggleButtonMode}>
-                <i className={buttonMode}></i>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
-    );
-  }
+	const [colorTheme, setColorTheme] = useState(getColorStatus());
+
+	console.log(colorTheme);
+
+	const toggleDarkMode = () => {
+		const newTheme = colorTheme === "dark" ? "light" : "dark";
+		setColorTheme(newTheme);
+		setColorStatus(newTheme);
+		document.body.setAttribute("data-theme", newTheme);
+	};
+
+	return (
+		<header>
+			<nav className="nav-container">
+				<a href="#landing" className="nav-logo">
+					Humber.dev
+				</a>
+				<div className="nav-menu">
+					<ul>
+						{navItems.map((navItem) => (
+							<li key={navItem.name}>
+								<a className="list-item" href={navItem.href}>
+									{navItem.name}
+								</a>
+							</li>
+						))}
+						{/* rome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
+						<li className="switch-button" onClick={toggleDarkMode}>
+							<i
+								id="buttonMode"
+								className={
+									colorTheme === "dark" ? "fa-solid fa-moon" : "fa-solid fa-sun"
+								}
+							/>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+	);
+}

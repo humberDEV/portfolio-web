@@ -5,6 +5,14 @@
   height: 100vh;
 }
 
+button {
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: blue;
+}
+
 .text-container {
   text-align: left;
   line-height: 2em;
@@ -24,11 +32,12 @@ h2 {
   font-weight: 400;
 }
 
-.buttons {
+.media-buttons {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+  flex-direction: row;
+  align-items: left;
+  gap: 2em;
+  margin-top: 1em;
 }
 
 .social-button,
@@ -78,14 +87,12 @@ h2 {
 }
 
 @keyframes profileAnimation {
-  0% {
+  0%,
+  100% {
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   }
   50% {
     border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
-  }
-  100% {
-    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   }
 }
 
