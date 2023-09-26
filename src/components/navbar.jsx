@@ -52,8 +52,14 @@ export default function Navbar() {
 				<a href="#landing" className="nav-logo">
 					Humber.dev
 				</a>
+
+				<input type="checkbox" id="check" />
+				<label htmlFor="check" className="icon">
+					<i className="fa-solid fa-bars" id="menu-icon" />
+					<i className="fa-solid fa-x" id="close-icon" />
+				</label>
 				<div className="nav-menu">
-					<ul>
+					<ul className="menu-list">
 						{navItems.map((navItem) => (
 							<li key={navItem.name}>
 								<a className="list-item" href={navItem.href}>

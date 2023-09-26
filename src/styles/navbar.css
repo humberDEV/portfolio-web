@@ -12,16 +12,25 @@
   background-color: var(--background);
 }
 
+.nav-container::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .nav-logo {
   margin-left: 10vw;
   font-weight: bolder;
 }
 
-ul {
+.menu-list {
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
   list-style: none;
+  justify-content: flex-end;
   margin-right: 10vw;
 }
 
@@ -30,17 +39,16 @@ a {
   text-decoration: none;
 }
 
-ul {
-  justify-content: flex-end;
+#check {
+  display: none;
 }
 
 #buttonMode {
   color: white;
 }
 
-a:hover,
+.nav-logo:hover,
 .list-item:hover {
-  transition: 0.3s all;
   color: #007bff;
   cursor: pointer;
 }
@@ -65,4 +73,51 @@ a:hover,
 .switch-button:hover {
   transform: scale(1.1);
   cursor: pointer;
+}
+
+.icon {
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1em;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .icon {
+    position: absolute;
+    display: block;
+  }
+
+  #check:checked ~ .icon #menu-icon {
+    display: none;
+  }
+
+  .icon #close-icon {
+    display: none;
+  }
+
+  #check:checked ~ .icon #close-icon {
+    display: block;
+  }
+
+  .menu-list {
+    position: absolute;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    height: 0;
+    width: 100vw;
+    margin-top: -10em;
+    padding: 0;
+    backdrop-filter: blur(5em);
+    transition: 0.3s ease;
+  }
+
+  #check:checked ~ .nav-menu .menu-list {
+    margin-top: 3.5em;
+    height: 100vh;
+  }
 }

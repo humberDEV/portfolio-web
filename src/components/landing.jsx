@@ -25,13 +25,17 @@ export default function Landing() {
 				<div className="media-buttons">
 					{/* rome-ignore lint/a11y/useButtonType: <explanation> */}
 					<button className="download-button">Download CV</button>
-					<a href="https://www.instagram.com/humber.gs/">
+
+					<a href="https://www.instagram.com/humber.gs/" aria-label="Instagram">
 						<i className="fa-brands fa-square-instagram" />
 					</a>
-					<a href="https://www.linkedin.com/in/humberto-garcia-arellano-8138a327a/">
+					<a
+						href="https://www.linkedin.com/in/humberto-garcia-arellano-8138a327a/"
+						aria-label="LinkedIn"
+					>
 						<i className="fa-brands fa-linkedin" />
 					</a>
-					<a href="https://github.com/humberDEV">
+					<a href="https://github.com/humberDEV" aria-label="GitHub">
 						<i className="fa-brands fa-square-github" />
 					</a>
 				</div>
