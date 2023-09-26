@@ -4,6 +4,19 @@ import "../styles/landing.css";
 const imItems = ["Fullstack.", "Front-end.", "Back-end."];
 
 export default function Landing() {
+	const downloadPdf = () => {
+		const pdfUrl = "./src/assets/HumbertoGarcia_CV.pdf";
+
+		const link = document.createElement("a");
+		link.href = pdfUrl;
+		link.download = "HumbertoGarcia_CV.pdf";
+
+		document.body.appendChild(link);
+		link.click();
+
+		document.body.removeChild(link);
+	};
+
 	useEffect(() => {
 		const targetElement = document.getElementById("im-text");
 		consoleText(imItems, targetElement);
@@ -24,7 +37,15 @@ export default function Landing() {
 
 				<div className="media-buttons">
 					{/* rome-ignore lint/a11y/useButtonType: <explanation> */}
-					<button className="download-button">Download CV</button>
+					<button
+						className="download-button"
+						onClick={() => {
+							downloadPdf();
+						}}
+					>
+						{" "}
+						Download CV
+					</button>
 
 					<a href="https://www.instagram.com/humber.gs/" aria-label="Instagram">
 						<i className="fa-brands fa-square-instagram" />
@@ -41,7 +62,7 @@ export default function Landing() {
 				</div>
 			</div>
 			<div className="image-container">
-				<img src="./profile_pic.jpeg" alt="Foto de perfil" />
+				<img src="./src/assets/profile_pic.jpeg" alt="Foto de perfil" />
 			</div>
 		</section>
 	);

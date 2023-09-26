@@ -103,21 +103,25 @@ a {
 
   .menu-list {
     position: absolute;
-    flex-direction: column;
     top: 0;
     left: 0;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 0;
     width: 100vw;
     margin-top: -10em;
     padding: 0;
-    backdrop-filter: blur(5em);
+    background-color: var(--background-color);
+    border-radius: 1em;
+    border-bottom: 0.2em solid var(--text-color);
     transition: 0.3s ease;
   }
 
   #check:checked ~ .nav-menu .menu-list {
+    padding-bottom: 1em;
     margin-top: 3.5em;
-    height: 100vh;
+    height: 40vh;
   }
 }

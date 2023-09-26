@@ -50,7 +50,7 @@ export default function Navbar() {
 		<header>
 			<nav className="nav-container">
 				<a href="#landing" className="nav-logo">
-					Humber.dev
+					{"<"}Humber.dev{">"}
 				</a>
 
 				<input type="checkbox" id="check" />
