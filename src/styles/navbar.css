@@ -9,7 +9,7 @@
   justify-content: space-between;
   align-items: center;
   z-index: 100;
-  background-color: var(--background);
+  background-color: var(--background-color);
 }
 
 .nav-container::before {
@@ -49,7 +49,7 @@ a {
 
 .nav-logo:hover,
 .list-item:hover {
-  color: #007bff;
+  color: var(--blue-color);
   cursor: pointer;
 }
 
@@ -65,7 +65,7 @@ a {
   align-items: center;
   width: 1.5em;
   height: 1.5em;
-  background-color: #007bff;
+  background-color: var(--blue-color);
   border-radius: 50%;
   transition: all 0.5s;
 }
@@ -114,14 +114,16 @@ a {
     margin-top: -10em;
     padding: 0;
     background-color: var(--background-color);
-    border-radius: 1em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
     border-bottom: 0.2em solid var(--text-color);
     transition: 0.3s ease;
   }
 
   #check:checked ~ .nav-menu .menu-list {
     padding-bottom: 1em;
-    margin-top: 3.5em;
+    margin-top: 3em;
     height: 40vh;
+    z-index: 50;
   }
 }

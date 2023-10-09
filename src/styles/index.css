@@ -5,8 +5,13 @@
   color-scheme: light dark;
 
   --background-color: #fbfafb;
+  --background-color-2: #ffffff;
   --text-color: #313031;
+  --text-color-2: #222122;
+  --shadow-color: rgba(0, 0, 0, 0.35);
+
   --transition-duration: 0.3s;
+  --blue-color: #007bff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,7 +22,10 @@
 
 [data-theme="dark"] {
   --background-color: #202020;
+  --background-color-2: #242424;
   --text-color: #fbfafb;
+  --text-color-2: #fbfafb70;
+  --shadow-color: rgba(255, 255, 255, 0.151);
 }
 
 body {

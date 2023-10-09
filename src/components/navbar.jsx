@@ -46,10 +46,19 @@ export default function Navbar() {
 		document.body.setAttribute("data-theme", newTheme);
 	};
 
+	const handleNavItemClick = () => {
+		// Desmarca la checkbox si está marcada
+		const checkbox = document.getElementById("check");
+		if (checkbox.checked) {
+			checkbox.checked = false;
+		}
+	};
+
 	return (
 		<header>
 			<nav className="nav-container">
-				<a href="#landing" className="nav-logo">
+				{/* rome-ignore lint/a11y/useValidAnchor: <explanation> */}
+				<a href="#landing" className="nav-logo" onClick={handleNavItemClick}>
 					{"<"}Humber.dev{">"}
 				</a>
 
@@ -61,7 +70,8 @@ export default function Navbar() {
 				<div className="nav-menu">
 					<ul className="menu-list">
 						{navItems.map((navItem) => (
-							<li key={navItem.name}>
+							// rome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
+							<li key={navItem.name} onClick={handleNavItemClick}>
 								<a className="list-item" href={navItem.href}>
 									{navItem.name}
 								</a>
