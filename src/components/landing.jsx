@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import "../styles/landing.css";
+import ScrollButton from "./scrollbutton";
 
 const imItems = ["Fullstack.", "Front-end.", "Back-end."];
 
@@ -64,6 +65,7 @@ export default function Landing() {
 			<div className="image-container">
 				<img src="./src/assets/profile_pic.jpeg" alt="Foto de perfil" />
 			</div>
+			<ScrollButton />
 		</section>
 	);
 }

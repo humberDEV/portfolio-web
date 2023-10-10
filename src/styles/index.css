@@ -28,6 +28,11 @@
   --shadow-color: rgba(255, 255, 255, 0.151);
 }
 
+html {
+  scroll-behavior: smooth;
+  transition: all 0.3s;
+}
+
 body {
   transition: background-color var(--transition-duration),
     color var(--transition-duration);

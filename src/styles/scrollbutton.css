@@ -1,0 +1,24 @@
+.custom-container {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-box {
+  width: 0.2em;
+  height: 1.2em;
+  border-radius: 1.5rem;
+  border-width: 3px;
+  border-style: solid;
+  border-color: var(--text-color);
+  padding: 0.5rem;
+}
+
+.custom-dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: var(--text-color);
+}
