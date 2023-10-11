@@ -33,35 +33,50 @@
 .profile-info h2 {
   font-family: monospace;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.8em;
   margin-bottom: 1em;
 }
 
 .profile-info p {
   font-size: 1em;
   margin-bottom: 1em;
-  max-width: 60vh;
+  max-width: 80vh;
 }
 
 @media screen and (max-width: 1000px) {
+  .page-about > h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+
   .experience p,
   .projects p {
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
 
   .profile-picture img {
-    width: 12em;
-    height: 12em;
+    width: 10em;
+    height: 10em;
+    margin: 0;
   }
 
   .profile-details {
-    margin-top: 1.5em;
     flex-direction: column;
   }
 
   .profile-info p {
     display: block;
     font-size: 0.8em;
+  }
+
+  .profile-info h2 {
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+  }
+
+  .experience,
+  .projects {
+    width: 40vw;
   }
 }
 
@@ -86,7 +101,6 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 50vw;
 }
 
 .experience,
@@ -95,7 +109,7 @@
   border-radius: 1em;
   padding: 1em;
   margin: 1em;
-  width: 20vw;
+  width: 25vw;
   text-align: center;
   margin-bottom: 1em;
 }
