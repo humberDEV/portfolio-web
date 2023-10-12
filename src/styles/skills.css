@@ -44,6 +44,7 @@
 
 .skill {
   margin: 1em;
+  animation: breathe 3s ease infinite alternate;
 }
 
 .skill img {
@@ -51,6 +52,10 @@
   height: auto;
   display: block;
   margin: 0 auto;
+}
+
+.skill img:hover {
+  transform: scale(1.1);
 }
 
 .skill p {
@@ -76,5 +81,14 @@
   .programming-languages,
   .frameworks-libraries {
     margin: 1em 0;
+  }
+}
+
+@keyframes breathe {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
   }
 }
