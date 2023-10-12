@@ -18,7 +18,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -63,24 +63,37 @@
   margin-top: 0.5em;
 }
 
+@media screen and (max-width: 1200px) {
+  .skills-container {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .page-skills h1 {
     font-size: 2.2em;
     margin-top: 1em;
   }
 
-  .skills-container {
-    flex-direction: column;
-    width: 90%;
+  .skills-container h2 {
+    font-size: 1.3em;
   }
 
   .columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     flex-direction: column;
   }
 
   .programming-languages,
   .frameworks-libraries {
-    margin: 1em 0;
+    margin: 1em;
+  }
+
+  .skill p {
+    font-size: 0.8em;
   }
 }
 
@@ -89,6 +102,6 @@
     transform: scale(1);
   }
   100% {
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
 }
