@@ -34,7 +34,7 @@ const experienceData = [
 		title: "Community Manager and Web Designer",
 		subtitle: "Pasapalos Bar y Restaurante",
 		description:
-			"Gestor de la presencia en línea para un bar venezolano durante varios meses. Responsable de administrar la página de Google y la página web del emprendimiento, CSS, HTML y JavaScript.",
+			"Online presence manager for a Venezuelan bar for several months. Responsible for managing the Google page and the venture's website, CSS, HTML, and JavaScript.",
 	},
 ];
 

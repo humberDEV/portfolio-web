@@ -1,0 +1,80 @@
+.page-skills {
+  background-color: var(--background-color-2);
+  color: var(--text-color);
+  padding: 2em;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-skills h1 {
+  font-size: 2.5em;
+  margin-top: 4em;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.programming-languages,
+.frameworks-libraries {
+  border: 0.2em solid var(--text-color);
+  border-radius: 30px;
+  margin: 1em;
+  flex: 1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.skills-container h2 {
+  font-size: 1.8em;
+  margin: 0.5em 0 1em;
+}
+
+.columns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill {
+  margin: 1em;
+}
+
+.skill img {
+  max-width: 3em;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.skill p {
+  font-size: 1em;
+  margin-top: 0.5em;
+}
+
+@media screen and (max-width: 768px) {
+  .page-skills h1 {
+    font-size: 2.2em;
+    margin-top: 1em;
+  }
+
+  .skills-container {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .columns {
+    flex-direction: column;
+  }
+
+  .programming-languages,
+  .frameworks-libraries {
+    margin: 1em 0;
+  }
+}
