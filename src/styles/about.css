@@ -3,14 +3,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 90vh;
+  min-height: 100vh;
   background-color: var(--background-color-2);
   text-align: center;
-  padding: 2em;
+  padding: 1.2em;
 }
 
 .page-about > h1 {
-  font-size: 2.5em;
+  font-size: 2.2em;
   margin-bottom: 1em;
 }
 
@@ -51,12 +51,12 @@
 
   .experience p,
   .projects p {
-    font-size: 0.7em;
+    font-size: 1em;
   }
 
   .profile-picture img {
-    width: 10em;
-    height: 10em;
+    width: 9em;
+    height: 9em;
     margin: 0;
   }
 
@@ -66,7 +66,7 @@
 
   .profile-info p {
     display: block;
-    font-size: 0.8em;
+    font-size: 1em;
   }
 
   .profile-info h2 {
@@ -77,6 +77,22 @@
   .experience,
   .projects {
     width: 40vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  page-about > h1 {
+    font-size: 1.5em;
+    margin-top: 0;
+  }
+
+  .profile-info p {
+    font-size: 0.8em;
+  }
+
+  .experience p,
+  .projects p {
+    font-size: 0.8em;
   }
 }
 

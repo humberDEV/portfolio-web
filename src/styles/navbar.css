@@ -123,7 +123,7 @@ a {
   #check:checked ~ .nav-menu .menu-list {
     padding-bottom: 1em;
     margin-top: 3em;
-    height: 40vh;
+    height: 50vh;
     z-index: 50;
   }
 }

@@ -1,0 +1,72 @@
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90vh;
+  background-color: var(--background-color);
+  text-align: center;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.timeline-container h1 {
+  font-size: 2.5em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.timeline-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline-logo {
+  border-radius: 50%;
+  width: 60px;
+}
+
+@media screen and (max-width: 1000px) {
+  .timeline-container {
+    height: 110vh;
+    padding: 0;
+  }
+
+  .timeline-container h1 {
+    font-size: 1.9em;
+    margin-top: 0;
+    margin: 0;
+  }
+
+  .timeline-logo {
+    width: 40px;
+  }
+}
+
+.timeline-buttons-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10em;
+}
+
+.timeline-button {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 1.2em;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.timeline-button:hover {
+  background-color: var(--background-color-2);
+  color: var(--text-color);
+}
+
+.timeline-button.active {
+  background-color: var(--text-color);
+  color: var(--background-color);
+}

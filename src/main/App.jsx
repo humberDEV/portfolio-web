@@ -1,4 +1,5 @@
 import About from "../components/about";
+import Experience from "../components/experience";
 import Landing from "../components/landing";
 import Navbar from "../components/navbar";
 
@@ -9,6 +10,7 @@ export function App() {
 				<Navbar />
 				<Landing />
 				<About />
+				<Experience />
 			</main>
 			<footer />
 		</>
