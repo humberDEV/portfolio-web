@@ -3,7 +3,6 @@
   top: 0;
   width: 100vw;
   padding: 1rem;
-  font-size: 1.2rem;
   font-weight: bold;
   display: flex;
   justify-content: space-between;
@@ -48,9 +47,11 @@ a {
 }
 
 .nav-logo:hover,
-.list-item:hover {
+.list-item:hover{
   color: var(--blue-color);
   cursor: pointer;
+  transition: .3s all ease;
+
 }
 
 .title {
@@ -65,13 +66,13 @@ a {
   align-items: center;
   width: 1.5em;
   height: 1.5em;
-  background-color: var(--blue-color);
   border-radius: 50%;
   transition: all 0.5s;
 }
 
 .switch-button:hover {
-  transform: scale(1.1);
+  color: var(--blue-color);
+  transform: scale(1.05);
   cursor: pointer;
 }
 

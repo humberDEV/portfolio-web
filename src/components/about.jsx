@@ -37,7 +37,9 @@ export default function About() {
 			</div>
 			<div className="profile-actions">
 				{/* rome-ignore lint/a11y/useButtonType: <explanation> */}
-				<button className="contact-button">Contact Now!</button>
+				<a href="#contact">
+					<button className="contact-button">Contact Now!</button>
+				</a>
 			</div>
 		</div>
 	);

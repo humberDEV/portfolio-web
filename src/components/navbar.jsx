@@ -84,6 +84,7 @@ export default function Navbar() {
 								className={
 									colorTheme === "dark" ? "fa-solid fa-moon" : "fa-solid fa-sun"
 								}
+								style={{ color: "var(--text-color)" }}
 							/>
 						</li>
 					</ul>
