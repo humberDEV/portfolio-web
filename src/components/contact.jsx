@@ -38,10 +38,11 @@ export default function ContactForm() {
 
 	return (
 		<div className="contact-container" id="contact">
-			<StarCanvas className="stars">
-				<div className="form-container">
-					<p className="title">Get in touch</p>
-					<h3 className="subtitle">Contact me.</h3>
+			<div className="form-container">
+				<p className="title">Get in touch 🌐</p>
+				<h3 className="subtitle">Contact me</h3>
+				<div className="forms">
+
 					<form
 						action="submit"
 						ref={formRef}
@@ -49,36 +50,33 @@ export default function ContactForm() {
 						className="form"
 					>
 						<label htmlFor="name" className="form-label">
-							<span className="label-text">Your name</span>
+							<span className="label-text">Name</span>
 							<input
 								id="name"
 								type="text"
 								name="name"
 								value={form.name}
-								placeholder="What's your name?"
 								onChange={handleChange}
 								className="input"
 							/>
 						</label>
 						<label htmlFor="email" className="form-label">
-							<span className="label-text">Your email</span>
+							<span className="label-text">Email</span>
 							<input
 								id="email"
 								type="email"
 								name="email"
 								value={form.email}
-								placeholder="What's your email?"
 								onChange={handleChange}
 								className="input"
 							/>
 						</label>
 						<label htmlFor="message" className="form-label">
-							<span className="label-text">Your message</span>
+							<span className="label-text">Message</span>
 							<textarea
 								id="message"
 								name="message"
 								value={form.message}
-								placeholder="What do you want to say?"
 								onChange={handleChange}
 								className="textarea"
 							/>
@@ -91,8 +89,8 @@ export default function ContactForm() {
 						</button>
 					</form>
 				</div>
-
-			</StarCanvas>
+			</div>
+			<StarCanvas />
 		</div>
 	);
 }

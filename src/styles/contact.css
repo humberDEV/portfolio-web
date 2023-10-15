@@ -1,17 +1,14 @@
 .contact-container {
   height: 100vh;
-}
-
-StarCanvas{
-  height: 10vh;
-  position: absolute;
-  inset: 0;
-  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .form-container {
+  background-color: var(--shadow-color);
   border: .2em solid var(--text-color);
-  max-width: 60%;
+  width: 60%;
   padding: 2em;
   border-radius: 15px;
   text-align: center;
@@ -22,19 +19,27 @@ StarCanvas{
 
 .title {
   justify-content: center;
-  font-size: 3em;
+  font-size: 2.4em;
   font-weight: bold;
 }
 
 .subtitle {
-  font-size: 2em;
+  font-size: 1.6em;
   font-weight: bold;
 }
 
 .form {
+  align-self: center;
+  width: 80%;
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 2em;
+  font-size: .8em;
+}
+
+.forms {
+  display: flex;
+  justify-content: center;
 }
 
 .form-label {
@@ -43,27 +48,28 @@ StarCanvas{
 }
 
 .label-text {
+  margin-left: 2em;
   font-weight: bold;
-  margin-bottom: 4px;
+  margin-bottom: .3em;
+  align-self: flex-start;
 }
 
 .input,
 .textarea {
-  background-color: lightgray;
-  padding: 10px;
-  font-size: 16px;
+  background-color: var(--background-color);
+  padding: 1em;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-weight: bold;
 }
 
 .textarea {
-  min-height: 150px;
+  min-height: 7em;
 }
 
 .submit-button {
   width: 100px;
-  background-color: lightgray;
+  background-color: var(--background-color);
   padding: 10px 20px;
   border: none;
   font-weight: bold;
@@ -71,4 +77,8 @@ StarCanvas{
   align-self: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: var(--blue-color);
 }
