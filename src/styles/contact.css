@@ -6,7 +6,7 @@
 }
 
 .form-container {
-  background-color: var(--shadow-color);
+  background-color: var(--background-color);
   border: .2em solid var(--text-color);
   width: 60%;
   padding: 2em;
