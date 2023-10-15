@@ -1,6 +1,5 @@
 import { useRef, useState } from "react";
 import "../styles/contact.css"
-import "./Stars"
 import StarCanvas from "./Stars";
 
 export default function ContactForm() {
