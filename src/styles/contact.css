@@ -1,0 +1,74 @@
+.contact-container {
+  height: 100vh;
+}
+
+StarCanvas{
+  height: 10vh;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.form-container {
+  border: .2em solid var(--text-color);
+  max-width: 60%;
+  padding: 2em;
+  border-radius: 15px;
+  text-align: center;
+  color: var(--text-color);
+  position: absolute;
+  z-index: 1;
+}
+
+.title {
+  justify-content: center;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-text {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.input,
+.textarea {
+  background-color: lightgray;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.textarea {
+  min-height: 150px;
+}
+
+.submit-button {
+  width: 100px;
+  background-color: lightgray;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  border-radius: 8px;
+  align-self: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
