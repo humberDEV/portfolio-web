@@ -40,7 +40,7 @@ function Stars(props) {
 	);
 }
 
-export default function StarCanvas() {
+export function StarCanvas() {
 	return (
 		<Canvas camera={{ position: [0, 0, 1] }}>
 			<Suspense fallback={null}>
