@@ -63,7 +63,7 @@ export default function Landing() {
 				</div>
 			</div>
 			<div className="image-container">
-				<img src="./src/assets/profile_pic.jpeg" alt="Foto de perfil" />
+				<img src="/../../profile_pic.jpeg" alt="Foto de perfil" />
 			</div>
 			<ScrollButton />
 		</section>

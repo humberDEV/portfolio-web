@@ -43,6 +43,23 @@
   }
 }
 
+@media screen and (max-height: 800px) {
+  .timeline-container {
+    height: 120vh;
+    padding: 0;
+  }
+
+  .timeline-container h1 {
+    font-size: 1.9em;
+    margin-top: 0;
+    margin: 0;
+  }
+
+  .timeline-logo {
+    width: 40px;
+  }
+}
+
 .timeline-buttons-container {
   display: flex;
   justify-content: center;

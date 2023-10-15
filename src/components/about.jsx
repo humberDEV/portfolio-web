@@ -1,7 +1,7 @@
 import "../styles/about.css";
 /* eslint-disable react/no-unescaped-entities */
 
-const about_pic = "./src/assets/about_pic.jpeg";
+const about_pic = "../../about_pic.jpeg";
 
 const profileInfo = {
 	title: 'System.out.printn("Hello World")',
