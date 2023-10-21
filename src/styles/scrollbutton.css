@@ -24,13 +24,14 @@
 }
 
 @media screen and (max-width: 768px) {
-  
   .custom-box {
-    width: 0.1em;
+    width: 0em;
+    height: .3em;
+    padding: .2rem;
   }
-  
+
   .custom-dot {
-    width: 1px;
+    width: 0px;
     height: 1px;
     border-radius: 50%;
     background-color: var(--text-color);

@@ -1,38 +1,60 @@
 import { useRef, useState } from "react";
 import "../styles/contact.css"
+import credentials from "../credentials.json"
 import StarCanvas from "./starcanvas";
+import emailjs from 'emailjs-com';
 
 export default function ContactForm() {
-	const [form, setForm] = useState({
-		name: '',
-		email: '',
-		message: ''
-	});
-
-	const [loading, setLoading] = useState(false);
-
 	const formRef = useRef();
+	const [form, setForm] = useState({
+		name: "",
+		email: "",
+		message: "",
+	});
+	const [loading, setLoading] = useState(false);
 
 	const handleChange = (e) => {
 		const { name, value } = e.target;
+
 		setForm({ ...form, [name]: value });
 	};
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		// Aquí puedes manejar la lógica para enviar el formulario
-
-		// Cambia el estado de loading si es necesario
-
 		setLoading(true);
-		setTimeout(500);
 
-		setLoading(false);
-		setForm({
-			name: '',
-			email: '',
-			message: ''
-		});
+		console.log(formRef.current);
+
+		emailjs
+			.send(
+				credentials.service_ID,
+				credentials.template_ID,
+				{
+					from_name: form.name,
+					from_email: form.email,
+					message: form.message,
+				},
+				credentials.public_KEY,
+			)
+			.then(
+				() => {
+					setLoading(false);
+					alert("Thank you. I will get back to you as soon as possible.");
+					setForm({
+						name: "",
+						email: "",
+						message: "",
+					});
+				},
+				(error) => {
+					setLoading(false);
+					console.error(error);
+					alert("Something went wrong. Please try again.");
+				},
+			)
+			.finally(() => {
+				setLoading(false);
+			});
 	};
 
 	return (
